@@ -9,7 +9,7 @@ import java.io.Serializable;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class LineItem implements Serializable {
+class OrderLineItem implements Serializable {
     private static final long serialVersionUID = 1234567L;
 
     private String cardItemId;

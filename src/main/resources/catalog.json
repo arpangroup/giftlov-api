@@ -1,0 +1,23 @@
+{
+  "items": [
+    {
+      "id": "CARD-99121",
+      "name": "Amazon Gift Card",
+      "brand": "Amazon",
+      "usageInstructions": "To use this card login to www.cardinfo.com",
+      "termsAndConditions": "Following are terms and conditions for this card",
+      "giftCardInformation": "This card allows you to buy products from cardinfo.com",
+      "fromValue": 1,
+      "toValue": 1000,
+      "currency": "AED",
+      "cardFaceImage": "https://cdn.giftlov.com/img/AShsadJASH",
+      "productId": 21312,
+      "categories": [
+        "Lifestyle"
+      ]
+    }
+  ],
+  "total": 0,
+  "rowCount": 0,
+  "current": 1
+}

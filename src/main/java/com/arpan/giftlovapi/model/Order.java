@@ -11,7 +11,7 @@ import java.util.Map;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderRequest implements Serializable {
+public class Order implements Serializable {
     private static final long serialVersionUID = 1234567L;
 
     private String customerName;
@@ -28,6 +28,5 @@ public class OrderRequest implements Serializable {
     private String languageCode = "EN";
     private String orderDate;//yyyy-MM-dd.//2022-05-15
 
-    private List<LineItem> lineItems;
+    private List<OrderLineItem> lineItems;
 }
-
