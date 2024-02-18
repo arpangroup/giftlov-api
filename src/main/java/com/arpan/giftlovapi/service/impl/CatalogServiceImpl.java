@@ -3,7 +3,6 @@ package com.arpan.giftlovapi.service.impl;
 import com.arpan.giftlovapi.model.Catalog;
 import com.arpan.giftlovapi.model.Item;
 import com.arpan.giftlovapi.model.ItemAvailability;
-import com.arpan.giftlovapi.model.test.SampleRequest;
 import com.arpan.giftlovapi.repository.CatalogDB;
 import com.arpan.giftlovapi.service.CatalogService;
 import com.arpan.giftlovapi.util.JsonReaderUtil;

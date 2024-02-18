@@ -15,9 +15,74 @@
       "categories": [
         "Lifestyle"
       ]
+    },
+    {
+      "id": "CARD-99122",
+      "name": "Flipkart Gift Card",
+      "brand": "Flipkart",
+      "usageInstructions": "To use this card login to www.cardinfo.com",
+      "termsAndConditions": "Following are terms and conditions for this card",
+      "giftCardInformation": "This card allows you to buy products from cardinfo.com",
+      "fromValue": 1,
+      "toValue": 5000,
+      "currency": "AED",
+      "cardFaceImage": "https://cdn.giftlov.com/img/AShsadJASH",
+      "productId": 21312,
+      "categories": [
+        "Lifestyle"
+      ]
+    },
+    {
+      "id": "CARD-99123",
+      "name": "Netflix Gift Card",
+      "brand": "Netflix",
+      "usageInstructions": "To use this card login to www.cardinfo.com",
+      "termsAndConditions": "Following are terms and conditions for this card",
+      "giftCardInformation": "This card allows you to buy products from cardinfo.com",
+      "fromValue": 1,
+      "toValue": 5000,
+      "currency": "AED",
+      "cardFaceImage": "https://cdn.giftlov.com/img/AShsadJASH",
+      "productId": 21312,
+      "categories": [
+        "Entertainment"
+      ]
+    },
+    {
+      "id": "CARD-99124",
+      "name": "Swiggy Gift Card",
+      "brand": "Swiggy",
+      "usageInstructions": "To use this card login to www.cardinfo.com",
+      "termsAndConditions": "Following are terms and conditions for this card",
+      "giftCardInformation": "This card allows you to buy products from cardinfo.com",
+      "fromValue": 1,
+      "toValue": 5000,
+      "currency": "AED",
+      "cardFaceImage": "https://cdn.giftlov.com/img/AShsadJASH",
+      "productId": 21312,
+      "categories": [
+        "Food"
+      ]
+    },
+    {
+      "id": "CARD-99125",
+      "name": "Swiggy Gift Card",
+      "brand": "Swiggy",
+      "usageInstructions": "To use this card login to www.cardinfo.com",
+      "termsAndConditions": "Following are terms and conditions for this card",
+      "giftCardInformation": "This card allows you to buy products from cardinfo.com",
+      "fromValue": 1,
+      "toValue": 5000,
+      "currency": "AED",
+      "cardFaceImage": "https://cdn.giftlov.com/img/AShsadJASH",
+      "productId": 21312,
+      "categories": [
+        "Food"
+      ]
     }
+
   ],
-  "total": 0,
+  "total": 5,
   "rowCount": 0,
   "current": 1
 }
