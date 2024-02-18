@@ -1,0 +1,4 @@
+endpoint:
+  generateTokenUri: /generateToken
+  catalogUri: /items
+  placeOrderUri: /placeOrder

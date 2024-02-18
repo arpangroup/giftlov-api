@@ -22,7 +22,7 @@ public class AuthServiceImpl implements AuthService {
     private final RestTemplate restTemplate;
     private final AuthTokenHolder authTokenHolder;
 
-    @Value("${endpoint.generateToken:/generateToken}")
+    @Value("${endpoint.generateToken:/generateTokenUri}")
     private String generateTokenUrl;
 
     @Override

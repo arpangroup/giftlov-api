@@ -1,5 +1,7 @@
 package com.arpan.giftlovapi.model;
 
+import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,10 +16,14 @@ import java.util.Map;
 public class Order implements Serializable {
     private static final long serialVersionUID = 1234567L;
 
+    @Min(value = 4, message = "customerName should be at least 5 characters long")
     private String customerName;
+    @Min(value = 2, message = "firstName should be at least 4 characters long")
     private String firstName;
+    @Min(value = 2, message = "lastName should be at least 4 characters long")
     private String lastName;
     private String referenceNo;
+    @NotNull
     private String deliveryChannel;
 
     private String contactNumber;

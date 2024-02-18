@@ -11,6 +11,8 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Catalog implements Serializable {
+    private static final long serialVersionUID = 1234567L;
+
     List<Item> items;
     private int total;
     private int rowCount;

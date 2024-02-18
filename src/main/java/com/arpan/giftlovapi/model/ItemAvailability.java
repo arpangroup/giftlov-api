@@ -11,6 +11,8 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ItemAvailability implements Serializable {
+    private static final long serialVersionUID = 1234567L;
+
     private Boolean available;
     private Integer code;
     private String message;
