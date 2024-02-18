@@ -14,6 +14,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -26,6 +27,7 @@ import java.util.List;
 @Component
 @Slf4j
 @RequiredArgsConstructor
+@Order(1)
 public class SimpleInMemoryAuthenticationFilter  extends OncePerRequestFilter {
     private final AuthTokenHolder authTokenHolder;
     private final ObjectMapper mapper;
