@@ -5,8 +5,8 @@ Giftlov API
 mvn spring-boot:run
 ```
 
-##_Prerequisit_
-| FEATURE |
+## _Prerequisit_
+| DEPENDENCIES |
 | ------ |
 | java17 |
 | maven |
