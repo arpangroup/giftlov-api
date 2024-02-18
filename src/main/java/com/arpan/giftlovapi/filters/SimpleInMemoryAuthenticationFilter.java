@@ -13,6 +13,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
@@ -30,10 +31,14 @@ public class SimpleInMemoryAuthenticationFilter  extends OncePerRequestFilter {
     private final ObjectMapper mapper;
     private final List<String> excludedPaths = List.of("/authenticate", "/registration", "/refreshToken");
 
+    @Value("${jwt.disable-token-expiry-validation:true}")
+    boolean disableTokenExpiryValidation;
+
+
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         log.debug("Request URL path : {}, Request content type: {}", request.getRequestURI(), request.getContentType());
-        if (!isPathExcluded(request)) {
+        if (!isPathExcluded(request) && !disableTokenExpiryValidation) {
             ErrorResponse errorResponse = isValidRequestToken(request);
             if (errorResponse != null) {
                 String errorBody = mapper.writeValueAsString(errorResponse);

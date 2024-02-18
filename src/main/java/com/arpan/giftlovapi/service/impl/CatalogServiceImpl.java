@@ -41,6 +41,14 @@ public class CatalogServiceImpl implements CatalogService {
         return items;
     }
 
+    @Override
+    public List<Item> getAllItems(int current, int rowCount, boolean includePricingDetails, String searchPhrase) {
+        // TODO implement
+        List<Item> items = catalogRepository.getItems();
+        syncCatalogItems();
+        return items;
+    }
+
 
     private Future<List<Item>> syncCatalogItems () {
         if (isGiftlovCatalogApiDisabled) {

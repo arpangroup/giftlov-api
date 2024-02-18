@@ -22,7 +22,12 @@ public class CatalogueController {
     private final CatalogService catalogService;
 
     @GetMapping
-    public List<Item> getAllCatalogs() {
-        return catalogService.getAllItems();
+    public List<Item> getAllCatalogs(
+            @RequestParam(value = "current", defaultValue = "1") int current,
+            @RequestParam(value = "rowCount", defaultValue = "10") int rowCount,
+            @RequestParam(value = "includePricingDetails", defaultValue = "false") boolean includePricingDetails,
+            @RequestParam(value = "searchPhrase", defaultValue = "") String searchPhrase
+    ) {
+        return catalogService.getAllItems(current, rowCount, includePricingDetails, searchPhrase);
     }
 }
