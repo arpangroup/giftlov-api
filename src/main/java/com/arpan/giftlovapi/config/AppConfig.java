@@ -9,7 +9,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
+import org.springframework.http.client.ClientHttpRequestFactory;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.function.Supplier;
 
 @Configuration
 public class AppConfig {
@@ -30,10 +35,10 @@ public class AppConfig {
                 accessToken,
                 secretKey
         );
-
          return builder
                 .rootUri(baseUri)
                 .defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                 //.errorHandler(new RestTemplateResponseErrorHandler())
                 .interceptors(
                         authorizationInterceptor
                         //new LoggingRequestInterceptor()

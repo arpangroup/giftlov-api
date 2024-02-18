@@ -5,19 +5,29 @@ import com.arpan.giftlovapi.util.JsonReaderUtil;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Repository
 @AllArgsConstructor
 public class CatalogDB {
-    private final List<Item> catalogDB;
+    private List<Item> catalogDB;
+
+    public CatalogDB() {
+        this.catalogDB = new ArrayList<>();
+    }
 
     List<Item> getAllCatalogItems() {
         return this.catalogDB;
     }
 
+    public List<Item> getItems() {
+        return this.catalogDB != null ? this.catalogDB : new ArrayList<>();
+    }
+
     public void putItem(Item item) {
-        if (getItem(item.getId()) != null){
+        boolean isItemExist = getItem(item.getId()) != null;
+        if (!isItemExist){
             catalogDB.add(item);
         }
     }

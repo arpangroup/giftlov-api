@@ -19,12 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AuthController {
     private final AuthService authService;
 
-    @GetMapping("/test")
-    public ResponseEntity<AuthorizationToken> test () throws AuthenticationException {
-        AuthRequest authRequest = new AuthRequest("john", "doe");
-        return ResponseEntity.ok(authService.authenticate(authRequest));
-    }
-
     @PostMapping("/authenticate")
     public ResponseEntity<AuthorizationToken> authenticateAndGetToken (@RequestBody AuthRequest authRequest) throws AuthenticationException {
         return ResponseEntity.ok(authService.authenticate(authRequest));
